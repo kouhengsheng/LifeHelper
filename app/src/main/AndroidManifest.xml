@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.ns.yc.lifehelper">
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.ns.yc.lifehelper">
 
 
     <application
@@ -11,14 +11,15 @@
         android:label="@string/app_yc_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        tools:replace="android:label"
-        tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ui.guide.view.activity.SplashActivity"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:replace="android:label">
+        <activity
+            android:name=".ui.guide.view.activity.SplashActivity"
             android:theme="@style/SplashTheme">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
 
@@ -31,14 +32,16 @@
             <intent-filter>
                 <!-- 协议部分配置 ,注意需要跟web配置相同-->
                 <!--协议部分，随便设置 yc://ycbjie.cn:8888/from?type=yangchong  -->
-                <data android:scheme="yc"
+                <data
                     android:host="ycbjie.cn"
                     android:path="/from"
-                    android:port="8888"/>
+                    android:port="8888"
+                    android:scheme="yc"/>
                 <!--下面这几行也必须得设置-->
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <action android:name="android.intent.action.VIEW"/>
             </intent-filter>
         </activity>
 
@@ -53,6 +56,7 @@
         <activity android:name=".ui.me.view.activity.MePersonActivity"/>
         <activity android:name=".ui.me.view.activity.MeLoginActivity"/>
         <activity android:name=".ui.me.view.activity.IndexJsActivity"/>
+
         <service android:name="com.ycbjie.library.base.app.InitializeService"/>
         <service android:name=".service.LoopRequestService"/>
     </application>

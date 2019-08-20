@@ -14,7 +14,7 @@
     <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW"/>
     <uses-permission android:name="android.permission.CALL_PHONE"/>
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <category android:name="android.intent.category.APP_MARKET" />
+
     <!--suppress DeprecatedClassUsageInspection -->
     <uses-permission android:name="android.permission.GET_TASKS"/>
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
@@ -34,7 +34,7 @@
         <meta-data
             android:name="com.ycbjie.library.base.glide.DiskCacheModule"
             android:value="DiskCacheModule" />
-
+        <!--<category android:name="android.intent.category.APP_MARKET" />-->
     </application>
 
 </manifest>
